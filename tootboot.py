@@ -110,9 +110,6 @@ def make_post(post_dict):
             # Download Twitter-compatible version of media file (static image or GIF under 3MB)
             if POST_TO_TWITTER:
                 media_file = get_media(post_dict[post].url, IMGUR_CLIENT, IMGUR_CLIENT_SECRET)
-            # Download Mastodon-compatible version of media file (static image or MP4 file)
-            if MASTODON_INSTANCE_DOMAIN:
-                hd_media_file = get_hd_media(post_dict[post], IMGUR_CLIENT, IMGUR_CLIENT_SECRET)
             # Post on Twitter
             if POST_TO_TWITTER:
                 # Make sure the post contains media, if MEDIA_POSTS_ONLY in config is set to True
@@ -165,7 +162,7 @@ try:
             "https://raw.githubusercontent.com/gusuu1/tootboot/version.txt") as url:
         s = url.read()
         new_version = s.decode("utf-8").rstrip()
-        current_version = 2.6  # Current version of script
+        current_version = 1.0  # Current version of script
         if current_version < float(new_version):
             print('[WARN] A new version of Tootboot (' + str(new_version) + ') is available! (you have ' + str(
                 current_version) + ')')
