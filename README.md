@@ -1,5 +1,5 @@
 # Tootboot 
-####Forked from Tootbot by Gusuu.
+#### Forked from Tootbot by Gusuu.
 
 This is a Python bot that looks up posts from specified subreddits and automatically posts them on Twitter. Myself I run a few Twitter accounts with Tootbot. I decided to fork this repository and make my own custom version.
 
